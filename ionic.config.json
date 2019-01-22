@@ -1,0 +1,7 @@
+{
+  "name": "anxing",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
