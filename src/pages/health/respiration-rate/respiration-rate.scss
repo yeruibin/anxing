@@ -1,0 +1,31 @@
+page-respiration-rate {
+  .segment-md .segment-button {
+    color:#009688;
+    font-size: 15px;
+    border-bottom-width:0px;//取消底部的边线
+    border-radius:5px;
+    border: #009688 solid 1px;
+    margin: 7px;
+  }
+
+  .segment-md .segment-button.segment-activated {
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #00b1a3;
+    border-radius:5px;
+    border:#60BDA2 solid 1px;
+    margin: 7px;
+  }
+
+  .listbuttom{
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #75b4a6;
+    border-radius:5px;
+    width: 158px;
+    height: 90px;
+    margin: 10px;
+  }
+}
