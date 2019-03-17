@@ -1,17 +1,145 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>健康数据</ion-title>
   </ion-navbar>
+  <!-- mode="md":指定为Android手机模式的 -->
+  <ion-segment [(ngModel)]="testSegment" mode="md">
+    <ion-segment-button *ngFor="let testItem of testArray" value="{{testItem}}">
+      {{testItem}}
+    </ion-segment-button>
+  </ion-segment>
+
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+<ion-content (swipe)="swipeEvnet($event)" style="background-color: #F7F7F7;">
+  <div [ngSwitch]="testSegment" >
+    <div *ngSwitchCase="'历史数据'" style="background-color: #60BDA2">
+
+
+      <div style="position:absolute; z-index:1;
+      left: 0%;top: 0%;margin-left:52px; margin-top: 10px;
+      background-color: #F7F7F7; height:100px; width:250px;
+      border-radius:15px; border:#60BDA2 solid 1px;text-align:center;">
+        <img src="/assets/imgs/userinfo.png" width="230" height="88"/>
+      </div>
+
+      <div style="position: relative; margin-top: 50px; margin-bottom: -20px"> <!--大绿色背景框-->
+        <br><br><br>
+        <ion-list id="infolist">
+      <button ion-item class="listbuttom" (click)="goHeartRate()">
+        <img src="../../assets/icon/心率.png" item-left style="margin-left:20px;height: 30px; width: 30px"/>
+        <span style="margin-left: 20px">心率</span>
+        <img src="../../assets/icon/心跳线条.png" item-right style="margin-right:10px;height: 38px; width: 75px"/>
+      </button><br>
+
+      <hr style="margin: unset">
+
+      <button ion-item class="listbuttom" (click)="goRespirationRate()">
+        <img src="../../assets/icon/呼吸.png" item-left style="margin-left:20px;height: 30px; width: 30px"/>
+        <span style="margin-left: 20px">呼吸速率</span>
+        <img src="../../assets/icon/呼吸线条.png" item-right style="margin-right:12px;height: 10px; width: 74px"/>
+      </button><br>
+
+      <hr style="margin: unset">
+
+      <button ion-item class="listbuttom" (click)="goBloodPressure()">
+        <img src="../../assets/icon/血压.png" item-left style="margin-left:20px;height: 30px; width: 30px"/>
+        <span style="margin-left: 20px">血压</span>
+        <img src="../../assets/icon/血压线条.png" item-right style="margin-right:12px;height: 31px; width: 74px"/>
+      </button><br>
+
+      <hr style="margin: unset">
+
+      <button ion-item class="listbuttom" (click)="goAttention()">
+        <img src="../../assets/icon/注意力.png" item-left style="margin-left:20px;height: 30px; width: 30px"/>
+        <span style="margin-left: 20px">注意力</span>
+        <img src="../../assets/icon/注意力线条.png" item-right style="margin-right:10px;height: 23px; width: 75px"/>
+      </button><br>
+
+      <hr style="margin: unset">
+
+      <button ion-item class="listbuttom" (click)="goFatigue()">
+        <img src="../../assets/icon/睡觉.png" item-left style="margin-left:22px;height: 30px; width: 30px"/>
+        <span style="margin-left: 18px">疲劳度</span>
+        <img src="../../assets/icon/疲劳度线条.png" item-right style="margin-right:10px;height: 28px; width: 68px"/>
+      </button><br>
+
+          <span style="color:#373737; text-align: center;display:block;">2019年2月17日   星期日</span>
+          <br><br><br><br><br>
+
+        </ion-list>
+      </div>
+
+
+    </div>
+
+
+
+    <div *ngSwitchCase="'临时驾驶记录'">
+      <!--<img src="/assets/imgs/temporary.png" width="360" height="480">-->
+      <ion-item >
+        2018-8-16 8:00am
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow"    (click)="isShow=!isShow"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon>
+      </ion-item>
+      <ion-list *ngIf="isShow">
+        <div style="text-align: center;border: #60BDA2 solid 3px;">
+          <img src="/assets/imgs/temporary.png" width="300" height="290" >
+        </div>
+      </ion-list>
+
+      <ion-item >
+        2018-8-14 2:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow1"    (click)="isShow1=!isShow1"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow1" (click)="isShow1=!isShow1"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-12 8:00am
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow2"    (click)="isShow2=!isShow2"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow2" (click)="isShow2=!isShow2"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-11 8:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow3"    (click)="isShow3=!isShow3"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow3" (click)="isShow3=!isShow3"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-11 7:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow3"    (click)="isShow3=!isShow3"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow3" (click)="isShow3=!isShow3"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-11 6:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow3"    (click)="isShow3=!isShow3"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow3" (click)="isShow3=!isShow3"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-11 5:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow3"    (click)="isShow3=!isShow3"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow3" (click)="isShow3=!isShow3"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-10 6:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow3"    (click)="isShow3=!isShow3"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow3" (click)="isShow3=!isShow3"></ion-icon>
+      </ion-item>
+
+      <ion-item >
+        2018-8-10 5:00pm
+        <ion-icon name="ios-arrow-down" item-right *ngIf="isShow3"    (click)="isShow3=!isShow3"></ion-icon>
+        <ion-icon name="ios-arrow-up" item-right *ngIf="!isShow3" (click)="isShow3=!isShow3"></ion-icon>
+      </ion-item>
+
+    </div>
+  </div>
 </ion-content>
+
+
+

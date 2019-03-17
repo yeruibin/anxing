@@ -1,3 +1,77 @@
-page-health {
 
+
+page-health {
+  .segment-md .segment-button {
+    color:#757373 ;
+    font-size: 15px;
+  }
+
+  .segment-md .segment-button.segment-activated {
+    color:#60BDA2;//#488AFF;
+    font-weight: bold;
+    border-bottom: #60BDA2 solid 2px;//删掉的话底线就用默认的蓝色
+  }
+  .background {
+    padding-top: 20px;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    height: 150px;
+    background-color: deepskyblue;
+    .imgRadius {
+      width: 75px;
+      height: 75px;
+      border-radius: 100%;
+      margin-left: 20%;
+      margin-top: 30%;
+    }
+    .iconSetting{
+      position: absolute;
+      font-size: 24px;
+      right: 20px;
+      top: 20px;
+    }
+  }
+
+  .label01{
+    margin-bottom: unset;
+    font-size: 20px;
+    margin-top: 7px;
+  }
+
+  .label02{
+    margin-top: 5%;
+    margin-bottom: 8px
+  }
+
+
+  #infolist{
+    margin-top: 7%;
+  }
+
+  .listbuttom{
+    height: 40px;
+    padding: unset;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #62b49c;
+  }
+
+  .endicon{
+    font-size: 32px;
+    color: #7c7c7c;
+  }
+
+  .beginicon{
+    font-size: 32px;
+    color: #444444;
+  }
+
+  .spanleft{
+    font-weight: bolder;
+  }
+
+  .spanright{
+    color: #c8c7cc;
+  }
 }
