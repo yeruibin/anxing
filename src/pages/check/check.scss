@@ -1,0 +1,47 @@
+page-register {
+  .page{
+    background: #60BDA2;
+  }
+  .page .page2{
+    background-color: white;
+    width: 100%;
+    height: 90%;
+    margin-top: 25px;
+  }
+  .page .page2 .page2-1,.page .page2 .page2-2{
+    width: 190px;
+    margin-left: 25%;
+  }
+  page .page2 .page2-1{
+    background: url("img/anxing_logo.png");
+  }
+  .page .page2 button{
+    width: 180px;
+    height: 30px;
+    background: #60BDA2;
+    color: white;
+    text-align: center;
+    border-radius:5px;
+
+  }
+  .page .page2 input{
+    width: 180px;
+    border-radius:5px;
+    border: 1px solid slategray;
+  }
+  .page .page2 .row{
+    margin-top: 5px;
+  }
+  .page .page2 .row .check{
+    background-color:#60BDA2;
+    border-radius: 5px ;
+    margin: 10px;
+    color: #f4f4f4;
+  }
+  .page .page2 .row .check input {
+    margin-left: 5px;
+    width: 10px;
+
+
+  }
+}
