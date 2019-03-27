@@ -3,6 +3,8 @@
 # Using ionic3 framework
 ### 健康 页面
 ![image](https://github.com/yeruibin/anxing/blob/master/phone-images/health.png);
+### 发现 页面
+![image](https://github.com/yeruibin/anxing/blob/master/phone-images/search.png);
 ### 我的 页面
 ![image](https://github.com/yeruibin/anxing/blob/master/phone-images/mine.png);
 ### 临时驾驶记录 页面
